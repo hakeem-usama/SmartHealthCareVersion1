@@ -1,0 +1,22 @@
+﻿@model IEnumerable<SmartHealthCare.Models.HealthMetrics>
+
+<h2>Health Metrics for Patient</h2>
+<table>
+    <tr>
+        <th>Metric ID</th>
+        <th>Heart Rate</th>
+        <th>Blood Pressure</th>
+        <th>Temperature</th>
+        <th>Recorded Date</th>
+    </tr>
+    @foreach (var metric in Model)
+    {
+        <tr>
+            <td>@metric.MetricID</td>
+            <td>@metric.HeartRate</td>
+            <td>@metric.BloodPressure</td>
+            <td>@metric.Temperature</td>
+            <td>@metric.RecordedDate.ToShortDateString()</td>
+        </tr>
+    }
+</table>

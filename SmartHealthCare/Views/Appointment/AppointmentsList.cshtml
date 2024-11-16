@@ -1,0 +1,22 @@
+﻿@model IEnumerable<SmartHealthCare.Models.Appointment>
+
+<h2>Appointments List</h2>
+<table>
+    <tr>
+        <th>Doctor ID</th>
+        <th>Patient ID</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Status</th>
+    </tr>
+    @foreach (var appointment in Model)
+    {
+        <tr>
+            <td>@appointment.DoctorID</td>
+            <td>@appointment.PatientID</td>
+            <td>@appointment.Date.ToShortDateString()</td>
+            <td>@appointment.Time</td>
+            <td>@appointment.Status</td>
+        </tr>
+    }
+</table>

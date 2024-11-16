@@ -1,0 +1,20 @@
+﻿@model IEnumerable<SmartHealthCare.Models.Notification>
+
+<h2>Notifications</h2>
+<table>
+    <tr>
+        <th>Notification ID</th>
+        <th>Message</th>
+        <th>Notification Date</th>
+        <th>Status</th>
+    </tr>
+    @foreach (var notification in Model)
+    {
+        <tr>
+            <td>@notification.NotificationID</td>
+            <td>@notification.Message</td>
+            <td>@notification.NotificationDate.ToShortDateString()</td>
+            <td>@notification.Status</td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<SmartHealthCare.Models.Prescription>
+
+<h2>Prescriptions</h2>
+<table>
+    <tr>
+        <th>Doctor ID</th>
+        <th>Medication</th>
+        <th>Dosage</th>
+        <th>Instructions</th>
+        <th>Date Issued</th>
+    </tr>
+    @foreach (var prescription in Model)
+    {
+        <tr>
+            <td>@prescription.DoctorID</td>
+            <td>@prescription.Medication</td>
+            <td>@prescription.Dosage</td>
+            <td>@prescription.Instructions</td>
+            <td>@prescription.DateIssued.ToShortDateString()</td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,16 @@
+﻿@model IEnumerable<SmartHealthCare.Models.Patient>
+
+<h2>Patient List</h2>
+<table>
+    <tr>
+        <th>Patient ID</th>
+        <th>Medical History</th>
+    </tr>
+    @foreach (var patient in Model)
+    {
+        <tr>
+            <td>@patient.PatientID</td>
+            <td>@patient.MedicalHistory</td>
+        </tr>
+    }
+</table>

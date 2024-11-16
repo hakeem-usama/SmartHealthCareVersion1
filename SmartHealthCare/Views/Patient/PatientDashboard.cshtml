@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Patient Dashboard";
+}
+
+<div class="container">
+    <h2 class="text-primary mb-4">Patient Dashboard</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-calendar-alt fa-3x text-info mb-3"></i>
+                    <h5 class="card-title">Book Appointment</h5>
+                    <a href="@Url.Action("BookAppointment", "Patient")" class="btn btn-outline-info btn-block">Book Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-file-medical fa-3x text-success mb-3"></i>
+                    <h5 class="card-title">Medical History</h5>
+                    <a href="@Url.Action("MedicalHistory", "Patient")" class="btn btn-outline-success btn-block">View History</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-heartbeat fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">Health Metrics</h5>
+                    <a href="@Url.Action("HealthMetrics", "Patient")" class="btn btn-outline-primary btn-block">View Metrics</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

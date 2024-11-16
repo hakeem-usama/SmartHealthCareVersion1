@@ -1,0 +1,68 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Smart Healthcare System</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">Smart Healthcare System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="User" asp-action="Register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="User" asp-action="Profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Appointment" asp-action="AppointmentsList">Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Doctor" asp-action="DoctorList">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Patient" asp-action="PatientList">Patients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="HealthMetrics" asp-action="MetricsList" asp-route-patientId="1">Health Metrics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Prescription" asp-action="PrescriptionsList" asp-route-patientId="1">Prescriptions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Notification" asp-action="NotificationList" asp-route-userId="1">Notifications</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Smart Healthcare System
+        </div>
+    </footer>
+
+    @* Scripts section for JavaScript files *@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
